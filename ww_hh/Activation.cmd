@@ -1,0 +1,1 @@
+Start /b HE_RegKey.exe "Worker guidance"

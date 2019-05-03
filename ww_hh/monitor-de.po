@@ -1,0 +1,668 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: OGS\n"
+"POT-Creation-Date: 2018-08-09 10:55+0200\n"
+"PO-Revision-Date: 2018-08-10 11:05+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.1.1\n"
+"X-Poedit-Basepath: ../../src/Monitor\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _L\n"
+"X-Poedit-SearchPath-0: Classes/AlarmManager.cpp\n"
+"X-Poedit-SearchPath-1: Classes/AlertAdaptee.cpp\n"
+"X-Poedit-SearchPath-2: Classes/BarcodeManager.cpp\n"
+"X-Poedit-SearchPath-3: Classes/ConfigFile.cpp\n"
+"X-Poedit-SearchPath-4: Classes/LuaStatus.cpp\n"
+"X-Poedit-SearchPath-5: Classes/Modbus.cpp\n"
+"X-Poedit-SearchPath-6: Classes/ModbusClient.cpp\n"
+"X-Poedit-SearchPath-7: Classes/SignalR.cpp\n"
+"X-Poedit-SearchPath-8: Classes/UserManager.cpp\n"
+"X-Poedit-SearchPath-9: Classes/Workflow.cpp\n"
+"X-Poedit-SearchPath-10: Components/uFrameTighteningGraphic.cpp\n"
+"X-Poedit-SearchPath-11: Components/uFrameTighteningList.cpp\n"
+"X-Poedit-SearchPath-12: Components/uMetroButton_ActionText.cpp\n"
+"X-Poedit-SearchPath-13: Components/uMetroButton_Alarms.cpp\n"
+"X-Poedit-SearchPath-14: Components/uMetroButton_FTP.cpp\n"
+"X-Poedit-SearchPath-15: Components/uMetroButton_Keyboard.cpp\n"
+"X-Poedit-SearchPath-16: Components/uMetroButton_LoginBig.cpp\n"
+"X-Poedit-SearchPath-17: Components/uMetroButton_LoginSmall.cpp\n"
+"X-Poedit-SearchPath-18: Components/uMetroButton_Operation.cpp\n"
+"X-Poedit-SearchPath-19: Components/uMetroButton_ProcInfo.cpp\n"
+"X-Poedit-SearchPath-20: Components/uMetroButton_Result.cpp\n"
+"X-Poedit-SearchPath-21: Components/uMetroButton_SignalR.cpp\n"
+"X-Poedit-SearchPath-22: Components/uMetroButton_STKN.cpp\n"
+"X-Poedit-SearchPath-23: Components/uMetroButton_Ticker.cpp\n"
+"X-Poedit-SearchPath-24: Components/uMetroButton_Tool.cpp\n"
+"X-Poedit-SearchPath-25: Components/uMetroButtonBase.cpp\n"
+"X-Poedit-SearchPath-26: Components/uMetroButtonMulti.cpp\n"
+"X-Poedit-SearchPath-27: Components/uMetroButtonSimple.cpp\n"
+"X-Poedit-SearchPath-28: Components/uMetroButtonText.cpp\n"
+"X-Poedit-SearchPath-29: Components/uMetroJobBarcodePopup.cpp\n"
+"X-Poedit-SearchPath-30: Components/uMetroModalGenericPopup.cpp\n"
+"X-Poedit-SearchPath-31: Components/uMetroModalLoginPopup.cpp\n"
+"X-Poedit-SearchPath-32: Components/uMetroModalPopup.cpp\n"
+"X-Poedit-SearchPath-33: Components/uMetroPopupAlarmBar.cpp\n"
+"X-Poedit-SearchPath-34: Components/uMetroPopupAlarmList.cpp\n"
+"X-Poedit-SearchPath-35: DM.cpp\n"
+"X-Poedit-SearchPath-36: Koecher.cpp\n"
+"X-Poedit-SearchPath-37: ProcessView.cpp\n"
+"X-Poedit-SearchPath-38: Schrauben.cpp\n"
+"X-Poedit-SearchPath-39: StartView.cpp\n"
+"X-Poedit-SearchPath-40: uDBCfg.cpp\n"
+"X-Poedit-SearchPath-41: uFTPOutputDriver.cpp\n"
+"X-Poedit-SearchPath-42: uProfiFtp.cpp\n"
+"X-Poedit-SearchPath-43: uSpashForm.cpp\n"
+"X-Poedit-SearchPath-44: uUDPTester.cpp\n"
+
+#: Classes/SignalR.cpp:164
+msgid "SignalR: URL missing in config file!"
+msgstr "SignalR: URL fehlt in der Konfigurationsdatei!"
+
+#: Classes/SignalR.cpp:170
+msgid "SignalR: HUB missing in config file!"
+msgstr "SignalR: HUB fehlt in der Konfigurationsdatei!"
+
+#: Classes/Workflow.cpp:774
+msgid "Tightening result status:"
+msgstr "Schraubergebnisstatus:"
+
+#: Classes/Workflow.cpp:774
+msgid "Save result into database?"
+msgstr "Ergebnis in Datenbank speichern?"
+
+#: Classes/Workflow.cpp:781 ProcessView.cpp:900 ProcessView.cpp:934
+msgid "Confirmation"
+msgstr "Bestätigung"
+
+#: Classes/Workflow.cpp:781
+msgid "Save"
+msgstr "Speichern"
+
+#: Components/uMetroButton_ActionText.cpp:25
+msgid "Current Action"
+msgstr "Aktuelle Aktion"
+
+#: Components/uMetroButton_ActionText.cpp:85
+msgid "  not active"
+msgstr " nicht aktiv"
+
+#: Components/uMetroButton_Alarms.cpp:18
+msgid "Alarms"
+msgstr "Alarme"
+
+#: Components/uMetroButton_Alarms.cpp:19 Components/uMetroButton_Alarms.cpp:35
+msgid " active"
+msgstr " aktiv"
+
+#: Components/uMetroButton_Alarms.cpp:20 Components/uMetroButton_Alarms.cpp:36
+msgid " unacknowledged"
+msgstr " nicht quittierte"
+
+#: Components/uMetroButton_FTP.cpp:45
+msgid "failed"
+msgstr "fehlgeschlagen"
+
+#: Components/uMetroButton_FTP.cpp:51 Components/uMetroButton_Result.cpp:27
+msgid "Result"
+msgstr "Ergebnis"
+
+#: Components/uMetroButton_FTP.cpp:54
+msgid "Host inaccessible"
+msgstr "Host unzugänglich"
+
+#: Components/uMetroButton_Keyboard.cpp:17
+msgid "Onscreen Keyboard"
+msgstr "Bildschirmtastatur"
+
+#: Components/uMetroButton_LoginBig.cpp:20
+msgid "User"
+msgstr "Operator"
+
+#: Components/uMetroButton_LoginBig.cpp:42
+msgid "Click to login..."
+msgstr "Zum Anmelden klicken ..."
+
+#: Components/uMetroButton_Operation.cpp:17
+msgid "Operation"
+msgstr "Vorgang"
+
+#: Components/uMetroButton_Operation.cpp:18
+msgid "Operation name"
+msgstr "Vorgangsname"
+
+#: Components/uMetroButton_ProcInfo.cpp:17
+msgid "Process Info"
+msgstr "Prozessinfo"
+
+#: Components/uMetroButton_Result.cpp:24
+msgid "Last Result"
+msgstr "Letztes Ergebnis"
+
+#: Components/uMetroButton_Result.cpp:58
+msgid "TMin"
+msgstr "Moment Min"
+
+#: Components/uMetroButton_Result.cpp:59
+msgid "TMax"
+msgstr "Moment Max"
+
+#: Components/uMetroButton_Result.cpp:60
+msgid "Target"
+msgstr "Sollmoment"
+
+#: Components/uMetroButton_Result.cpp:66
+msgid "not active"
+msgstr "nicht aktiv"
+
+#: Components/uMetroButton_STKN.cpp:22
+msgid "Socket Tray"
+msgstr "Stecknussköcher"
+
+#: Components/uMetroButton_STKN.cpp:35
+msgid "Communication error"
+msgstr "Kommunikationsfehler"
+
+#: Components/uMetroButton_STKN.cpp:46
+msgid "Selected: false"
+msgstr "Ausgewählt: falsch"
+
+#: Components/uMetroButton_STKN.cpp:49
+msgid "Selected: none"
+msgstr "Ausgewählt: keine"
+
+#: Components/uMetroButton_STKN.cpp:52
+msgid "Selected: "
+msgstr "Ausgewählt: "
+
+#: Components/uMetroButton_STKN.cpp:62
+msgid "Selection disabled"
+msgstr "Auswahl deaktiviert"
+
+#: Components/uMetroButton_SignalR.cpp:22
+msgid "Communication"
+msgstr "Kommunikation"
+
+#: Components/uMetroButton_SignalR.cpp:62
+msgid "SignalR: lost update!"
+msgstr "SignalR: Update verloren!"
+
+#: Components/uMetroButton_SignalR.cpp:79
+msgid "SignalR: New data received while still operating!"
+msgstr "SignalR: Neue Daten erhalten im laufenden Betrieb!"
+
+#: Components/uMetroButton_SignalR.cpp:114
+msgid "SignalR: Invalid data received!"
+msgstr "SignalR: Ungültige Daten empfangen!"
+
+#: Components/uMetroButton_Ticker.cpp:18 ProcessView.cpp:159
+msgid "Ticker"
+msgstr "Ticker"
+
+#: Components/uMetroButton_Tool.cpp:24
+msgid "Active Tool"
+msgstr "Aktives Werkzeug"
+
+#: Components/uMetroButton_Tool.cpp:263 Components/uMetroButton_Tool.cpp:532
+msgid "Tool communication error"
+msgstr "Werkzeugkommunikationsfehler"
+
+#: Components/uMetroButton_Tool.cpp:273
+msgid "All tools connected"
+msgstr "Alle Werkzeuge verbunden"
+
+#: Components/uMetroButton_Tool.cpp:288 Components/uMetroButton_Tool.cpp:291
+msgid "Not connected"
+msgstr "Nicht verbunden"
+
+#: Components/uMetroButton_Tool.cpp:295
+msgid "Tool connection terminated"
+msgstr "Werkzeugverbindung beendet"
+
+#: Components/uMetroButton_Tool.cpp:298
+msgid "Tool connection disabled"
+msgstr "Werkzeugverbindung deaktiviert"
+
+#: Components/uMetroButton_Tool.cpp:302
+msgid "Unknown communication error"
+msgstr "Unbekannter Kommunikationsfehler"
+
+#: Components/uMetroButton_Tool.cpp:416
+msgid "Not configured in station.ini!"
+msgstr "In 'station.ini' nicht konfiguriert!"
+
+#: Components/uMetroButton_Tool.cpp:419 Components/uMetroButton_Tool.cpp:498
+#: uProfiFtp.cpp:430
+msgid "Program not available"
+msgstr "Schraubprogramm nicht verfügbar"
+
+#: Components/uMetroButton_Tool.cpp:422
+msgid "Start: Unknown error"
+msgstr "Start: Unbekannter Fehler"
+
+#: Components/uMetroButton_Tool.cpp:486
+msgid "Wait for NOK acknowledge or release trigger"
+msgstr "Auf NOK-Bestätigung oder Freigabe der Starttaste warten"
+
+#: Components/uMetroButton_Tool.cpp:490
+msgid "Tool reports system fault"
+msgstr "Werkzeug meldet Systemfehler"
+
+#: Components/uMetroButton_Tool.cpp:494
+msgid "Wait for CW selected"
+msgstr "Warten für CW Signal"
+
+#: Components/uMetroButton_Tool.cpp:504
+msgid "Tool in invalid state!"
+msgstr "Werkzeug im ungültigen Zustand!"
+
+#: Components/uMetroButton_Tool.cpp:511
+msgid "Wait for NOK acknowledge"
+msgstr "Warte auf NOK-Bestätigung"
+
+#: Components/uMetroButton_Tool.cpp:516
+msgid "Wait for release start button"
+msgstr "Warten Sie auf die Freigabe der Starttaste"
+
+#: Components/uMetroButton_Tool.cpp:537
+msgid "Tool not ready"
+msgstr "Werkzeug nicht bereit"
+
+#: Components/uMetroButton_Tool.cpp:541
+msgid "Tool did not acknowledge NOK!"
+msgstr "Tool hat NOK nicht bestätigt!"
+
+#: Components/uMetroButton_Tool.cpp:546
+msgid "Unknown job state"
+msgstr "Unbekannter Jobstatus"
+
+#: Components/uMetroJobBarcodePopup.cpp:25
+#: Components/uMetroJobBarcodePopup.cpp:72
+#: Components/uMetroJobBarcodePopup.cpp:116 ProcessView.cpp:770
+msgid "Invalid barcode"
+msgstr "Ungültiger Barcode"
+
+#: Components/uMetroModalGenericPopup.cpp:25
+#: Components/uMetroModalLoginPopup.cpp:23
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: Components/uMetroModalLoginPopup.cpp:21
+msgid "Login"
+msgstr "Anmelden"
+
+#: Components/uMetroModalLoginPopup.cpp:22
+msgid "Logoff"
+msgstr "Abmelden"
+
+#: Components/uMetroModalLoginPopup.cpp:24
+msgid "Invalid username or password"
+msgstr "Ungültiger Benutzername oder Passwort"
+
+#: Components/uMetroPopupAlarmBar.cpp:25
+msgid "Ack!"
+msgstr "Bestätigen!"
+
+#: Components/uMetroPopupAlarmList.cpp:24
+msgid "Close"
+msgstr "Schließen"
+
+#: Components/uMetroPopupAlarmList.cpp:25
+msgid "Alarms and Notifications"
+msgstr "Alarme und Benachrichtigungen"
+
+#: Components/uMetroPopupAlarmList.cpp:26
+msgid "Hide acknwledged"
+msgstr "Bestätigte ausblenden"
+
+#: Components/uMetroPopupAlarmList.cpp:27
+msgid "Show history"
+msgstr "Zeige die Geschichte"
+
+#: Components/uMetroPopupAlarmList.cpp:28
+msgid "Show active"
+msgstr "Aktivierte anzeigen"
+
+#: Components/uMetroPopupAlarmList.cpp:29
+msgid "Hide info"
+msgstr "Infos ausblenden"
+
+#: Components/uMetroPopupAlarmList.cpp:30
+msgid "Achnowledge all alarms"
+msgstr "Quittieren aller Alarme"
+
+#: DM.cpp:214
+msgid " Database not found: '"
+msgstr " Datenbank nicht gefunden: '"
+
+#: DM.cpp:452
+msgid "This part was already processed and archived with result status:"
+msgstr "Dieses Bauteil wurde bereits bearbeitet und archiviert. Ergebnisstatus :"
+
+#: DM.cpp:453
+msgid "Please choose how to continue the process:"
+msgstr "Bitte wählen Sie, wie der Prozess fortgesetzt werden soll:"
+
+#: DM.cpp:455
+msgid "Start as a new part"
+msgstr "Als neues Bauteil starten"
+
+#: DM.cpp:455
+msgid "Continue existing part"
+msgstr "Bestehendes Bauteil fortsetzen"
+
+#: DM.cpp:455 StartView.cpp:688
+msgid "Abort"
+msgstr "Abbrechen"
+
+#: ProcessView.cpp:67
+msgid "Clear All"
+msgstr ""
+"Alles\n"
+"löschen"
+
+#: ProcessView.cpp:68
+msgid "Clear Op"
+msgstr ""
+"Vorgang\n"
+"löschen"
+
+#: ProcessView.cpp:69
+msgid "Skip Op"
+msgstr ""
+"Nächste\n"
+"Operation"
+
+#: ProcessView.cpp:70
+msgid "Clear Job"
+msgstr ""
+"Job\n"
+"löschen"
+
+#: ProcessView.cpp:71
+msgid "Skip Job"
+msgstr ""
+"Nächster\n"
+"Job"
+
+#: ProcessView.cpp:72
+msgid "M"
+msgstr "M"
+
+#: ProcessView.cpp:73
+msgid "Done"
+msgstr "Fertig"
+
+#: ProcessView.cpp:74 uProfiFtp.cpp:338
+msgid "Loosen"
+msgstr "Lösen"
+
+#: ProcessView.cpp:75 uDBCfg.cpp:979 uDBCfg.cpp:1044
+msgid "NOK"
+msgstr "NOK"
+
+#: ProcessView.cpp:76 Schrauben.cpp:759 Schrauben.cpp:1358 uDBCfg.cpp:980
+#: uDBCfg.cpp:1044
+msgid "OK"
+msgstr "OK"
+
+#: ProcessView.cpp:77
+msgid "Start"
+msgstr "Start"
+
+#: ProcessView.cpp:78
+msgid "Stop"
+msgstr "Halt"
+
+#: ProcessView.cpp:733
+msgid "Please return all tools into socket tray to finish!"
+msgstr "Bitte geben Sie alle Werkzeuge zum Abschluss in den Stecknussköcher zurück!"
+
+#: ProcessView.cpp:774
+msgid "Error: it must not happen (missing job definition)!"
+msgstr "Fehler: Es darf nicht vorkommen (fehlende Jobdefinition)!"
+
+#: ProcessView.cpp:819
+msgid "Barcode does not match current Job"
+msgstr "Der Barcode stimmt nicht mit dem aktuellen Job überein"
+
+#: ProcessView.cpp:898
+msgid "Clear all tightening results. Are You sure?"
+msgstr "Alle Schraubergebnisse löschen. Sind Sie sicher?"
+
+#: ProcessView.cpp:900 ProcessView.cpp:934
+msgid "Yes!"
+msgstr "Ja!"
+
+#: ProcessView.cpp:933
+msgid "clear job tightening results. Are You sure?"
+msgstr "Job Schraubergebnisse löschen. Sind Sie sicher?"
+
+#: ProcessView.cpp:978
+msgid "ProcessView timer: Bolt not found"
+msgstr "Prozessansicht: Schraubstelle nicht gefunden"
+
+#: ProcessView.cpp:1002
+msgid "Error: it must not happen(121)!"
+msgstr "Fehler: Es darf nicht passieren (121)!"
+
+#: ProcessView.cpp:1027
+msgid "Error: Job is still aborted!"
+msgstr "Fehler: Job bleibt abgebrochen!"
+
+#: Schrauben.cpp:106
+msgid "NOK result! Please call supervisor to continue tightening process!"
+msgstr "NOK! Bitte rufen Sie den Master an, um den Schraubprozess fortzusetzen!"
+
+#: Schrauben.cpp:725
+msgid "Data structure inconsistent! See  details in ETWTraceViewer."
+msgstr "Data structure inconsistent! See details in ETWTraceViewer."
+
+#: Schrauben.cpp:759 Schrauben.cpp:1358
+msgid ""
+"\n"
+"Manual operation"
+msgstr ""
+"\n"
+"Handbetrieb"
+
+#: Schrauben.cpp:759 Schrauben.cpp:1358
+msgid "Skip"
+msgstr "Überspringen"
+
+#: Schrauben.cpp:1354 Schrauben.cpp:1355
+msgid "Tightening OK?"
+msgstr "Anziehen OK?"
+
+#: StartView.cpp:99
+msgid "  Last processed part"
+msgstr "  Zuletzt verarbeitetes Bauteil"
+
+#: StartView.cpp:100
+msgid "  Date"
+msgstr "  Datum"
+
+#: StartView.cpp:560
+msgid "Unrecognized Part"
+msgstr "Unbekanntes Bauteil"
+
+#: StartView.cpp:686
+msgid "Application is running in Demo mode!"
+msgstr "Die Anwendung läuft im Demo-Modus!"
+
+#: StartView.cpp:687
+msgid ""
+"\n"
+"Two allowed parts have been already processed."
+msgstr ""
+"\n"
+"Zwei erlaubte Teile wurden bereits verarbeitet."
+
+#: StartView.cpp:688
+msgid ""
+"\n"
+"Request activation key"
+msgstr ""
+"\n"
+"Aktivierungsschlüssel anfordern"
+
+#: StartView.cpp:1182
+#, c-format
+msgid "Trial Version (%d/30) days"
+msgstr "Testversion (% d/30) Tage"
+
+#: StartView.cpp:1193
+msgid "Demo Version"
+msgstr "Demo-Version"
+
+#: uDBCfg.cpp:975
+msgid "NOK & incomplete"
+msgstr "NOK & unvollständig"
+
+#: uDBCfg.cpp:976
+msgid "incomplete"
+msgstr "unvollständig"
+
+#: uDBCfg.cpp:1046
+msgid "invalid"
+msgstr "ungültig"
+
+#: uDBCfg.cpp:1063
+msgid "File already exists: '"
+msgstr "Datei ist bereits vorhanden: '"
+
+#: uDBCfg.cpp:1066
+msgid "Failed to save file: '"
+msgstr "Fehler beim Schreiben der Datei: '"
+
+#: uProfiFtp.cpp:336
+msgid "Caution!"
+msgstr "Vorsicht!"
+
+#: uProfiFtp.cpp:337
+msgid "next start:"
+msgstr "Nächster Start:"
+
+#: uProfiFtp.cpp:398
+msgid "Lost connection"
+msgstr "Kommunikation abgebrochen"
+
+#: uProfiFtp.cpp:406
+msgid "no job requested/ user abort"
+msgstr "Kein Job angefordert oder Abbruch durch Benutzer"
+
+#: uProfiFtp.cpp:416
+msgid "start requested"
+msgstr "Start angefordert"
+
+#: uProfiFtp.cpp:417
+msgid "wait for reset ActEn acknowledge"
+msgstr "warten auf Zurücksetzen des ActEn Signals"
+
+#: uProfiFtp.cpp:418
+msgid "Info block sent"
+msgstr "Infoblock gesendet"
+
+#: uProfiFtp.cpp:419
+msgid "wait for Rdy signal"
+msgstr "warte auf Rdy"
+
+#: uProfiFtp.cpp:420
+msgid "wait for InCy"
+msgstr "warte auf InCy"
+
+#: uProfiFtp.cpp:421
+msgid "loosen: wait for InCy"
+msgstr "Lösen: warte auf InCy"
+
+#: uProfiFtp.cpp:422
+msgid "wait for CyCmp"
+msgstr "warte auf CyCmp"
+
+#: uProfiFtp.cpp:423
+msgid "wait for tightening result"
+msgstr "warte auf Schraubergebnis"
+
+#: uProfiFtp.cpp:424
+msgid "wait for NOK acknowledge or release trigger"
+msgstr "Auf NOK-Bestätigung oder Freigabe der Starttaste warten"
+
+#: uProfiFtp.cpp:425
+msgid "missing NOFAULT signal"
+msgstr "Signal NOFAULT fehlt"
+
+#: uProfiFtp.cpp:426
+msgid "wait for active enable change"
+msgstr "warte auf Änderung des ActEn"
+
+#: uProfiFtp.cpp:427
+msgid "wait for valid socket"
+msgstr "warte auf gültigen Socket"
+
+#: uProfiFtp.cpp:428
+msgid "wait for CW ('prg 99' is not allowed)"
+msgstr "warte auf CW ('Prg 99' ist nicht erlaubt)"
+
+#: uProfiFtp.cpp:429
+msgid "wait for counter reset"
+msgstr "Warte auf Zurücksetzen des Zählers"
+
+#: uProfiFtp.cpp:432
+msgid "invalid state"
+msgstr "ungültiger Status"
+
+#: uProfiFtp.cpp:444
+msgid "done (wait for NOK acknowledge)"
+msgstr "fertig (warte auf NOK-Bestätigung )"
+
+#: uProfiFtp.cpp:444
+msgid "done (wait for button release)"
+msgstr "fertig (warte auf die Freigabe der Starttaste)"
+
+#: uProfiFtp.cpp:453
+msgid "done (successful)"
+msgstr "fertig (erfolgreich)"
+
+#: uProfiFtp.cpp:458
+msgid "done (error)"
+msgstr "fertig (Fehler)"
+
+#: uProfiFtp.cpp:459
+msgid "done (timeout)"
+msgstr "fertig (Timeout)"
+
+#: uProfiFtp.cpp:460
+msgid "done (user abort)"
+msgstr "Fertig (Abbruch durch Benutzer)"
+
+#: uProfiFtp.cpp:461
+msgid "done (network abort)"
+msgstr "fertig (Netzwerk abgebrochen)"
+
+#: uProfiFtp.cpp:462
+msgid "done (state error)"
+msgstr "fertig (Statusfehler)"
+
+#: uProfiFtp.cpp:463
+msgid "done (timeout warning)"
+msgstr "fertig (Timeout-Warnung)"
+
+#: uProfiFtp.cpp:464
+msgid "missing Rdy signal"
+msgstr "Rdy Signal fehlt"
+
+#: uProfiFtp.cpp:465
+msgid "missing NOK acknowledgement"
+msgstr "NOK-Bestätigung fehlt"
+
+#: uProfiFtp.cpp:478
+msgid "Error code"
+msgstr "Fehlercode"
+
+#: uProfiFtp.cpp:503
+msgid "tool stopped"
+msgstr "Werkzeug angehalten"

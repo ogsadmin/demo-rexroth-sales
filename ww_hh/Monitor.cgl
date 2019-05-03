@@ -1,0 +1,575 @@
+Error 17025. 0x300010 (Thread 0x5DCC):
+Resource leak: The memory block (0x43612C0) was never freed
+
+The memory block (0x043612C0) [size: 256 bytes] was allocated with calloc
+Call Tree:
+   0x004BFC96(=Monitor.exe:0x01:0BEC96) Schrauben.cpp#841
+   0x00475CEB(=Monitor.exe:0x01:074CEB) Classes\Workflow.cpp#590
+   0x004B98BA(=Monitor.exe:0x01:0B88BA) ProcessView.cpp#809
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+   0x011567B3(=fmx250.bpl:0x01:3257B3)
+   0x011F26D6(=fmx250.bpl:0x01:3C16D6)
+   0x00406375(=Monitor.exe:0x01:005375) Monitor.cpp#79
+   0x00557104(=Monitor.exe:0x01:156104)
+   0x00557390(=Monitor.exe:0x01:156390)
+
+------------------------------------------
+Error 17026. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0xB619740) was never deleted
+
+The object (0x0B619740) [size: 288 bytes] was created with new
+Call Tree:
+   0x0F3F48D5(=heGWK.dll:0x01:0138D5) GWKConnection.cpp#401
+   0x0F3FED55(=heGWK.dll:0x01:01DD55) TightGWKTask.cpp#26
+   0x0F3EA624(=heGWK.dll:0x01:009624) dllmain.cpp#50
+   0x00410BAF(=Monitor.exe:0x01:00FBAF) ..\..\inc\heToolDriver.cpp#63
+   0x00513DAC(=Monitor.exe:0x01:112DAC) uProfiFtp.cpp#135
+   0x00517181(=Monitor.exe:0x01:116181) uProfiFtp.cpp#513
+   0x004A8A84(=Monitor.exe:0x01:0A7A84) DM.cpp#174
+   0x011EF40D(=fmx250.bpl:0x01:3BE40D)
+   0x005195AC(=Monitor.exe:0x01:1185AC) uSpashForm.cpp#53
+   0x005193E1(=Monitor.exe:0x01:1183E1) uSpashForm.cpp#39
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+
+------------------------------------------
+Error 17027. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0x109FB960) was never deleted
+
+The object (0x109FB960) [size: 8 bytes] was created with new
+Call Tree:
+   0x0047A833(=Monitor.exe:0x01:079833) Components\uFrameTighteningGraphic.cpp#210
+   0x004B5A89(=Monitor.exe:0x01:0B4A89) ProcessView.cpp#208
+   0x004B5927(=Monitor.exe:0x01:0B4927) ProcessView.cpp#190
+   0x004B9110(=Monitor.exe:0x01:0B8110) ProcessView.cpp#715
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+   0x011567B3(=fmx250.bpl:0x01:3257B3)
+   0x011F26D6(=fmx250.bpl:0x01:3C16D6)
+   0x00406375(=Monitor.exe:0x01:005375) Monitor.cpp#79
+   0x00557104(=Monitor.exe:0x01:156104)
+   0x00557390(=Monitor.exe:0x01:156390)
+
+------------------------------------------
+Error 17028. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0x108AB900) was never deleted
+
+The object (0x108AB900) [size: 56 bytes] was created with new
+Call Tree:
+   0x00485C24(=Monitor.exe:0x01:084C24) Components\uFrameTighteningList.cpp#388
+   0x00486769(=Monitor.exe:0x01:085769) Components\uFrameTighteningList.cpp#469
+   0x004B8885(=Monitor.exe:0x01:0B7885) ProcessView.cpp#629
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+   0x011567B3(=fmx250.bpl:0x01:3257B3)
+   0x011F26D6(=fmx250.bpl:0x01:3C16D6)
+   0x00406375(=Monitor.exe:0x01:005375) Monitor.cpp#79
+   0x00557104(=Monitor.exe:0x01:156104)
+   0x00557390(=Monitor.exe:0x01:156390)
+
+------------------------------------------
+Error 17029. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0x108AB8C0) was never deleted
+
+The object (0x108AB8C0) [size: 56 bytes] was created with new
+Call Tree:
+   0x00485C24(=Monitor.exe:0x01:084C24) Components\uFrameTighteningList.cpp#388
+   0x00486769(=Monitor.exe:0x01:085769) Components\uFrameTighteningList.cpp#469
+   0x004B8885(=Monitor.exe:0x01:0B7885) ProcessView.cpp#629
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+   0x011567B3(=fmx250.bpl:0x01:3257B3)
+   0x011F26D6(=fmx250.bpl:0x01:3C16D6)
+   0x00406375(=Monitor.exe:0x01:005375) Monitor.cpp#79
+   0x00557104(=Monitor.exe:0x01:156104)
+   0x00557390(=Monitor.exe:0x01:156390)
+
+------------------------------------------
+Error 17030. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0x108AB880) was never deleted
+
+The object (0x108AB880) [size: 56 bytes] was created with new
+Call Tree:
+   0x00485C24(=Monitor.exe:0x01:084C24) Components\uFrameTighteningList.cpp#388
+   0x00486769(=Monitor.exe:0x01:085769) Components\uFrameTighteningList.cpp#469
+   0x004B8885(=Monitor.exe:0x01:0B7885) ProcessView.cpp#629
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+   0x011567B3(=fmx250.bpl:0x01:3257B3)
+   0x011F26D6(=fmx250.bpl:0x01:3C16D6)
+   0x00406375(=Monitor.exe:0x01:005375) Monitor.cpp#79
+   0x00557104(=Monitor.exe:0x01:156104)
+   0x00557390(=Monitor.exe:0x01:156390)
+
+------------------------------------------
+Error 17031. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0x108AB840) was never deleted
+
+The object (0x108AB840) [size: 56 bytes] was created with new
+Call Tree:
+   0x00485C24(=Monitor.exe:0x01:084C24) Components\uFrameTighteningList.cpp#388
+   0x00486769(=Monitor.exe:0x01:085769) Components\uFrameTighteningList.cpp#469
+   0x004B8885(=Monitor.exe:0x01:0B7885) ProcessView.cpp#629
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+   0x011567B3(=fmx250.bpl:0x01:3257B3)
+   0x011F26D6(=fmx250.bpl:0x01:3C16D6)
+   0x00406375(=Monitor.exe:0x01:005375) Monitor.cpp#79
+   0x00557104(=Monitor.exe:0x01:156104)
+   0x00557390(=Monitor.exe:0x01:156390)
+
+------------------------------------------
+Error 17032. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0x109FBBC0) was never deleted
+
+The object (0x109FBBC0) [size: 8 bytes] was created with new
+Call Tree:
+   0x0047A833(=Monitor.exe:0x01:079833) Components\uFrameTighteningGraphic.cpp#210
+   0x004B5A89(=Monitor.exe:0x01:0B4A89) ProcessView.cpp#208
+   0x004B5927(=Monitor.exe:0x01:0B4927) ProcessView.cpp#190
+   0x004B9110(=Monitor.exe:0x01:0B8110) ProcessView.cpp#715
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+   0x011567B3(=fmx250.bpl:0x01:3257B3)
+   0x011F26D6(=fmx250.bpl:0x01:3C16D6)
+   0x00406375(=Monitor.exe:0x01:005375) Monitor.cpp#79
+   0x00557104(=Monitor.exe:0x01:156104)
+   0x00557390(=Monitor.exe:0x01:156390)
+
+------------------------------------------
+Error 17033. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0x108A5BC0) was never deleted
+
+The object (0x108A5BC0) [size: 56 bytes] was created with new
+Call Tree:
+   0x00485C24(=Monitor.exe:0x01:084C24) Components\uFrameTighteningList.cpp#388
+   0x00486769(=Monitor.exe:0x01:085769) Components\uFrameTighteningList.cpp#469
+   0x004B8885(=Monitor.exe:0x01:0B7885) ProcessView.cpp#629
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+   0x011567B3(=fmx250.bpl:0x01:3257B3)
+   0x011F26D6(=fmx250.bpl:0x01:3C16D6)
+   0x00406375(=Monitor.exe:0x01:005375) Monitor.cpp#79
+   0x00557104(=Monitor.exe:0x01:156104)
+   0x00557390(=Monitor.exe:0x01:156390)
+
+------------------------------------------
+Error 17034. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0x108ABB80) was never deleted
+
+The object (0x108ABB80) [size: 56 bytes] was created with new
+Call Tree:
+   0x00485C24(=Monitor.exe:0x01:084C24) Components\uFrameTighteningList.cpp#388
+   0x00486769(=Monitor.exe:0x01:085769) Components\uFrameTighteningList.cpp#469
+   0x004B8885(=Monitor.exe:0x01:0B7885) ProcessView.cpp#629
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+   0x011567B3(=fmx250.bpl:0x01:3257B3)
+   0x011F26D6(=fmx250.bpl:0x01:3C16D6)
+   0x00406375(=Monitor.exe:0x01:005375) Monitor.cpp#79
+   0x00557104(=Monitor.exe:0x01:156104)
+   0x00557390(=Monitor.exe:0x01:156390)
+
+------------------------------------------
+Error 17035. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0x108A5B80) was never deleted
+
+The object (0x108A5B80) [size: 56 bytes] was created with new
+Call Tree:
+   0x00485C24(=Monitor.exe:0x01:084C24) Components\uFrameTighteningList.cpp#388
+   0x00486769(=Monitor.exe:0x01:085769) Components\uFrameTighteningList.cpp#469
+   0x004B8885(=Monitor.exe:0x01:0B7885) ProcessView.cpp#629
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+   0x011567B3(=fmx250.bpl:0x01:3257B3)
+   0x011F26D6(=fmx250.bpl:0x01:3C16D6)
+   0x00406375(=Monitor.exe:0x01:005375) Monitor.cpp#79
+   0x00557104(=Monitor.exe:0x01:156104)
+   0x00557390(=Monitor.exe:0x01:156390)
+
+------------------------------------------
+Error 17036. 0x300010 (Thread 0x5DCC):
+Resource leak: The memory block (0x43611B0) was never freed
+
+The memory block (0x043611B0) [size: 256 bytes] was allocated with calloc
+Call Tree:
+   0x004BFC96(=Monitor.exe:0x01:0BEC96) Schrauben.cpp#841
+   0x00475CEB(=Monitor.exe:0x01:074CEB) Classes\Workflow.cpp#590
+   0x004B98BA(=Monitor.exe:0x01:0B88BA) ProcessView.cpp#809
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+   0x011567B3(=fmx250.bpl:0x01:3257B3)
+   0x011F26D6(=fmx250.bpl:0x01:3C16D6)
+   0x00406375(=Monitor.exe:0x01:005375) Monitor.cpp#79
+   0x00557104(=Monitor.exe:0x01:156104)
+   0x00557390(=Monitor.exe:0x01:156390)
+
+------------------------------------------
+Error 17037. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0x108ABDC0) was never deleted
+
+The object (0x108ABDC0) [size: 56 bytes] was created with new
+Call Tree:
+   0x00485C24(=Monitor.exe:0x01:084C24) Components\uFrameTighteningList.cpp#388
+   0x00486769(=Monitor.exe:0x01:085769) Components\uFrameTighteningList.cpp#469
+   0x004B8885(=Monitor.exe:0x01:0B7885) ProcessView.cpp#629
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+   0x011567B3(=fmx250.bpl:0x01:3257B3)
+   0x011F26D6(=fmx250.bpl:0x01:3C16D6)
+   0x00406375(=Monitor.exe:0x01:005375) Monitor.cpp#79
+   0x00557104(=Monitor.exe:0x01:156104)
+   0x00557390(=Monitor.exe:0x01:156390)
+
+------------------------------------------
+Error 17038. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0x108ABD80) was never deleted
+
+The object (0x108ABD80) [size: 56 bytes] was created with new
+Call Tree:
+   0x00485C24(=Monitor.exe:0x01:084C24) Components\uFrameTighteningList.cpp#388
+   0x00486769(=Monitor.exe:0x01:085769) Components\uFrameTighteningList.cpp#469
+   0x004B8885(=Monitor.exe:0x01:0B7885) ProcessView.cpp#629
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+   0x011567B3(=fmx250.bpl:0x01:3257B3)
+   0x011F26D6(=fmx250.bpl:0x01:3C16D6)
+   0x00406375(=Monitor.exe:0x01:005375) Monitor.cpp#79
+   0x00557104(=Monitor.exe:0x01:156104)
+   0x00557390(=Monitor.exe:0x01:156390)
+
+------------------------------------------
+Error 17039. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0x108ABD40) was never deleted
+
+The object (0x108ABD40) [size: 56 bytes] was created with new
+Call Tree:
+   0x00485C24(=Monitor.exe:0x01:084C24) Components\uFrameTighteningList.cpp#388
+   0x00486769(=Monitor.exe:0x01:085769) Components\uFrameTighteningList.cpp#469
+   0x004B8885(=Monitor.exe:0x01:0B7885) ProcessView.cpp#629
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+   0x011567B3(=fmx250.bpl:0x01:3257B3)
+   0x011F26D6(=fmx250.bpl:0x01:3C16D6)
+   0x00406375(=Monitor.exe:0x01:005375) Monitor.cpp#79
+   0x00557104(=Monitor.exe:0x01:156104)
+   0x00557390(=Monitor.exe:0x01:156390)
+
+------------------------------------------
+Error 17040. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0x108ABD00) was never deleted
+
+The object (0x108ABD00) [size: 56 bytes] was created with new
+Call Tree:
+   0x00485C24(=Monitor.exe:0x01:084C24) Components\uFrameTighteningList.cpp#388
+   0x00486769(=Monitor.exe:0x01:085769) Components\uFrameTighteningList.cpp#469
+   0x004B8885(=Monitor.exe:0x01:0B7885) ProcessView.cpp#629
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+   0x011567B3(=fmx250.bpl:0x01:3257B3)
+   0x011F26D6(=fmx250.bpl:0x01:3C16D6)
+   0x00406375(=Monitor.exe:0x01:005375) Monitor.cpp#79
+   0x00557104(=Monitor.exe:0x01:156104)
+   0x00557390(=Monitor.exe:0x01:156390)
+
+------------------------------------------
+Error 17041. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0x109FBCE0) was never deleted
+
+The object (0x109FBCE0) [size: 8 bytes] was created with new
+Call Tree:
+   0x0047A833(=Monitor.exe:0x01:079833) Components\uFrameTighteningGraphic.cpp#210
+   0x004B5A89(=Monitor.exe:0x01:0B4A89) ProcessView.cpp#208
+   0x004B5927(=Monitor.exe:0x01:0B4927) ProcessView.cpp#190
+   0x004B9110(=Monitor.exe:0x01:0B8110) ProcessView.cpp#715
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+   0x011567B3(=fmx250.bpl:0x01:3257B3)
+   0x011F26D6(=fmx250.bpl:0x01:3C16D6)
+   0x00406375(=Monitor.exe:0x01:005375) Monitor.cpp#79
+   0x00557104(=Monitor.exe:0x01:156104)
+   0x00557390(=Monitor.exe:0x01:156390)
+
+------------------------------------------
+Error 17042. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0x108A5C40) was never deleted
+
+The object (0x108A5C40) [size: 56 bytes] was created with new
+Call Tree:
+   0x00485C24(=Monitor.exe:0x01:084C24) Components\uFrameTighteningList.cpp#388
+   0x00486769(=Monitor.exe:0x01:085769) Components\uFrameTighteningList.cpp#469
+   0x004B8885(=Monitor.exe:0x01:0B7885) ProcessView.cpp#629
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+   0x011567B3(=fmx250.bpl:0x01:3257B3)
+   0x011F26D6(=fmx250.bpl:0x01:3C16D6)
+   0x00406375(=Monitor.exe:0x01:005375) Monitor.cpp#79
+   0x00557104(=Monitor.exe:0x01:156104)
+   0x00557390(=Monitor.exe:0x01:156390)
+
+------------------------------------------
+Error 17043. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0xFAE3C20) was never deleted
+
+The object (0x0FAE3C20) [size: 20 bytes] was created with new
+Call Tree:
+   0x004CEDDF(=Monitor.exe:0x01:0CDDDF) uDBCfg.h#157
+   0x00500084(=Monitor.exe:0x01:0FF084) uDBCfg.h#171
+   0x004FFD40(=Monitor.exe:0x01:0FED40) uDBCfg.h#228
+   0x004FF910(=Monitor.exe:0x01:0FE910) uDBCfg.h#275
+   0x004D3399(=Monitor.exe:0x01:0D2399) uDBCfg.cpp#534
+   0x00472D17(=Monitor.exe:0x01:071D17) Classes\Workflow.cpp#144
+   0x004B54B8(=Monitor.exe:0x01:0B44B8) ProcessView.cpp#118
+   0x004C8E24(=Monitor.exe:0x01:0C7E24) StartView.cpp#660
+   0x004C878E(=Monitor.exe:0x01:0C778E) StartView.cpp#569
+   0x004C8C82(=Monitor.exe:0x01:0C7C82) StartView.cpp#635
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+
+------------------------------------------
+Error 17044. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0x108A9FC0) was never deleted
+
+The object (0x108A9FC0) [size: 56 bytes] was created with new
+Call Tree:
+   0x00485C24(=Monitor.exe:0x01:084C24) Components\uFrameTighteningList.cpp#388
+   0x00486769(=Monitor.exe:0x01:085769) Components\uFrameTighteningList.cpp#469
+   0x004B8885(=Monitor.exe:0x01:0B7885) ProcessView.cpp#629
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+   0x011567B3(=fmx250.bpl:0x01:3257B3)
+   0x011F26D6(=fmx250.bpl:0x01:3C16D6)
+   0x00406375(=Monitor.exe:0x01:005375) Monitor.cpp#79
+   0x00557104(=Monitor.exe:0x01:156104)
+   0x00557390(=Monitor.exe:0x01:156390)
+
+------------------------------------------
+Error 17045. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0x1080DFE0) was never deleted
+
+The object (0x1080DFE0) [size: 56 bytes] was created with new
+Call Tree:
+   0x00485C24(=Monitor.exe:0x01:084C24) Components\uFrameTighteningList.cpp#388
+   0x00486769(=Monitor.exe:0x01:085769) Components\uFrameTighteningList.cpp#469
+   0x004B8885(=Monitor.exe:0x01:0B7885) ProcessView.cpp#629
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+   0x011567B3(=fmx250.bpl:0x01:3257B3)
+   0x011F26D6(=fmx250.bpl:0x01:3C16D6)
+   0x00406375(=Monitor.exe:0x01:005375) Monitor.cpp#79
+   0x00557104(=Monitor.exe:0x01:156104)
+   0x00557390(=Monitor.exe:0x01:156390)
+
+------------------------------------------
+Error 17046. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0xFAE3FE0) was never deleted
+
+The object (0x0FAE3FE0) [size: 16 bytes] was created with new
+Call Tree:
+   0x004F7DC4(=Monitor.exe:0x01:0F6DC4) c:\program files (x86)\embarcadero\studio\19.0\include\dinkumware\xmemory#19
+   0x004F39AC(=Monitor.exe:0x01:0F29AC) c:\program files (x86)\embarcadero\studio\19.0\include\dinkumware\xmemory#134
+   0x004ED049(=Monitor.exe:0x01:0EC049) c:\program files (x86)\embarcadero\studio\19.0\include\dinkumware\vector#1148
+   0x004E3AF0(=Monitor.exe:0x01:0E2AF0) c:\program files (x86)\embarcadero\studio\19.0\include\dinkumware\vector#764
+   0x004DA635(=Monitor.exe:0x01:0D9635) c:\program files (x86)\embarcadero\studio\19.0\include\dinkumware\vector#710
+   0x004FF92D(=Monitor.exe:0x01:0FE92D) uDBCfg.h#275
+   0x004D3399(=Monitor.exe:0x01:0D2399) uDBCfg.cpp#534
+   0x00472D17(=Monitor.exe:0x01:071D17) Classes\Workflow.cpp#144
+   0x004B54B8(=Monitor.exe:0x01:0B44B8) ProcessView.cpp#118
+   0x004C8E24(=Monitor.exe:0x01:0C7E24) StartView.cpp#660
+   0x004C878E(=Monitor.exe:0x01:0C778E) StartView.cpp#569
+   0x004C8C82(=Monitor.exe:0x01:0C7C82) StartView.cpp#635
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+
+------------------------------------------
+Error 17047. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0x1080DFA0) was never deleted
+
+The object (0x1080DFA0) [size: 56 bytes] was created with new
+Call Tree:
+   0x00485C24(=Monitor.exe:0x01:084C24) Components\uFrameTighteningList.cpp#388
+   0x00486769(=Monitor.exe:0x01:085769) Components\uFrameTighteningList.cpp#469
+   0x004B8885(=Monitor.exe:0x01:0B7885) ProcessView.cpp#629
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+   0x011567B3(=fmx250.bpl:0x01:3257B3)
+   0x011F26D6(=fmx250.bpl:0x01:3C16D6)
+   0x00406375(=Monitor.exe:0x01:005375) Monitor.cpp#79
+   0x00557104(=Monitor.exe:0x01:156104)
+   0x00557390(=Monitor.exe:0x01:156390)
+
+------------------------------------------
+Error 17048. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0x108A9F40) was never deleted
+
+The object (0x108A9F40) [size: 56 bytes] was created with new
+Call Tree:
+   0x00485C24(=Monitor.exe:0x01:084C24) Components\uFrameTighteningList.cpp#388
+   0x00486769(=Monitor.exe:0x01:085769) Components\uFrameTighteningList.cpp#469
+   0x004B8885(=Monitor.exe:0x01:0B7885) ProcessView.cpp#629
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+   0x011567B3(=fmx250.bpl:0x01:3257B3)
+   0x011F26D6(=fmx250.bpl:0x01:3C16D6)
+   0x00406375(=Monitor.exe:0x01:005375) Monitor.cpp#79
+   0x00557104(=Monitor.exe:0x01:156104)
+   0x00557390(=Monitor.exe:0x01:156390)
+
+------------------------------------------
+Error 17049. 0x300010 (Thread 0x5DCC):
+Resource leak: The memory block (0xB697410) was never freed
+
+The memory block (0x0B697410) [size: 76 bytes] was allocated with strdup
+Call Tree:
+   0x0044FB3C(=Monitor.exe:0x01:04EB3C) ..\Common\ww\BasicStartup.cpp#49
+   0x004A8256(=Monitor.exe:0x01:0A7256) DM.cpp#116
+   0x011EF40D(=fmx250.bpl:0x01:3BE40D)
+   0x005195AC(=Monitor.exe:0x01:1185AC) uSpashForm.cpp#53
+   0x005193E1(=Monitor.exe:0x01:1183E1) uSpashForm.cpp#39
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+   0x011567B3(=fmx250.bpl:0x01:3257B3)
+   0x011F26D6(=fmx250.bpl:0x01:3C16D6)
+   0x00406375(=Monitor.exe:0x01:005375) Monitor.cpp#79
+   0x00557104(=Monitor.exe:0x01:156104)
+
+------------------------------------------
+Error 17050. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0x1080DF60) was never deleted
+
+The object (0x1080DF60) [size: 56 bytes] was created with new
+Call Tree:
+   0x00485C24(=Monitor.exe:0x01:084C24) Components\uFrameTighteningList.cpp#388
+   0x00486769(=Monitor.exe:0x01:085769) Components\uFrameTighteningList.cpp#469
+   0x004B8885(=Monitor.exe:0x01:0B7885) ProcessView.cpp#629
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+   0x011567B3(=fmx250.bpl:0x01:3257B3)
+   0x011F26D6(=fmx250.bpl:0x01:3C16D6)
+   0x00406375(=Monitor.exe:0x01:005375) Monitor.cpp#79
+   0x00557104(=Monitor.exe:0x01:156104)
+   0x00557390(=Monitor.exe:0x01:156390)
+
+------------------------------------------
+Error 17051. 0x300010 (Thread 0x5DCC):
+Resource leak: The object (0x3D37F60) was never deleted
+
+The object (0x03D37F60) [size: 4 bytes] was created with new
+Call Tree:
+   0x004CF499(=Monitor.exe:0x01:0CE499) uDBCfg.h#204
+   0x004FFBFA(=Monitor.exe:0x01:0FEBFA) uDBCfg.h#218
+   0x004FF910(=Monitor.exe:0x01:0FE910) uDBCfg.h#275
+   0x004D3399(=Monitor.exe:0x01:0D2399) uDBCfg.cpp#534
+   0x00472D17(=Monitor.exe:0x01:071D17) Classes\Workflow.cpp#144
+   0x004B54B8(=Monitor.exe:0x01:0B44B8) ProcessView.cpp#118
+   0x004C8E24(=Monitor.exe:0x01:0C7E24) StartView.cpp#660
+   0x004C878E(=Monitor.exe:0x01:0C778E) StartView.cpp#569
+   0x004C8C82(=Monitor.exe:0x01:0C7C82) StartView.cpp#635
+   0x0124DC1F(=fmx250.bpl:0x01:41CC1F)
+   0x74F3D2B3(=user32.dll:0x01:02C2B3)
+   0x74F1EFC5(=user32.dll:0x01:00DFC5)
+   0x74F1E2C3(=user32.dll:0x01:00D2C3)
+   0x74F1DFA0(=user32.dll:0x01:00CFA0)
+   0x01156984(=fmx250.bpl:0x01:325984)
+
+------------------------------------------

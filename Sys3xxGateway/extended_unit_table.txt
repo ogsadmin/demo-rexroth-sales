@@ -1,0 +1,2 @@
+[ID=27] [Name=Temp]    [Act=C] [Min=C-]	[Max=C+]	[Target=CP]	[Unit=C°]
+[ID=28] [Name=Pressure][Act=PR][Min=PR-][Max=PR+]	[Target=PRP][Unit=Nm2]
