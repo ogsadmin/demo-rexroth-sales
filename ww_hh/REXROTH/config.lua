@@ -7,8 +7,8 @@ requires = {
 	"lua_tool_sync",
 	"mqtt",
 --	"custom_units",
+	"lua_tool_ble_sylvac",
 }
---current_project.logo_file = 'i4.png'
 current_project.logo_file = 'OGS-I4.png'
 current_project.billboard = 'local://index.html'
 --current_project.billboard ='www.boschrexroth.com'

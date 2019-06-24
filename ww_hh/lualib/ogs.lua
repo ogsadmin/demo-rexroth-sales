@@ -19,7 +19,6 @@ local ogs = {}
 --					"SignalR"
 --				}
 --
-
 --------------------------------------------------------------------------------------------------
 
 function ogs.Initialize(base_folder)
@@ -58,6 +57,17 @@ require('lualib/user_manager_base')
 		end
 	end
 end
+
+-- override globals:
+-- hack require to log loaded lua modules
+local r_old = require
+local r_new = function(x)
+	local s2 = debug.getinfo(2, "nSl")
+	local file = s2.short_src
+	XTRACE(16, "require '" .. x .. "'", file, s2.currentline)
+    return r_old(x)
+end
+require = r_new
 
 -- Return "this" module-table
 return ogs

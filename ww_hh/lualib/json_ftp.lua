@@ -113,6 +113,8 @@ end
 		$!value5!$ 	 		- 	measurement value 5
 		$!value6!$ 	 		- 	measurement value 6
 
+		$!system_type!$     -   system type ( 0 - unknown, 1 - Bosch Rexroth System, ...)
+
 
 WARNING!!! 	Don't use format specifiers % in format string. If necessary use %% instead.
 			Use a quote ' only to open and close a string but not within a string.
@@ -133,7 +135,7 @@ function json_lua_output.get_by_names_array(tool, t, st_res, part_res,bolt_res)
 		slot = math.floor((tool-1)%6+1)
 	end
 
-
+	json_lua_output.result.system_type  = 0      -- 0 = unknown, 1 = Bosch Tightening system
 	json_lua_output.result.station_name = st_res.name
 	json_lua_output.result.ip 			= st_res.host
 	json_lua_output.result.time 		= string.format('%04d-%02d-%02d %02d:%02d:%02d',t.year,t.month,t.day,t.hour,t.min,t.sec)
@@ -163,6 +165,7 @@ function json_lua_output.get_by_names_array(tool, t, st_res, part_res,bolt_res)
 	json_lua_output.result.qc 			= bolt_res.qc
 	json_lua_output.result.seq			= bolt_res.seq
 
+
 end
 --------------------------------------------------------------------------------------------
 function json_lua_output.get_indexed_array(name_list)
@@ -183,12 +186,17 @@ function LUA_GetJSON(tool, station, part_seq,bolt_seq)
 			return nil,nil		-- invalid tool type
 	end
 
+	local get_tags =lua_known_tool_types.get_impl(tool_type,'get_tags')
+	if type(get_tags) ~= 'function' then
+		get_tags = json_lua_output.default_get_tags
+	end
+
 	local type_impl = lua_known_tool_types[tool_type]
 
 
 	local JsonFmt = type_impl['JsonFmt']
 	if type(JsonFmt) ~= 'string' or #JsonFmt == 0 then
-		XTRACE(16, "invalid JSON format string tool=" ..tostring(tool)  )
+		XTRACE(1, "invalid JSON format string tool=" ..tostring(tool)  )
 		return nil,nil		-- invalid format string
 	end
 
@@ -212,6 +220,7 @@ function LUA_GetJSON(tool, station, part_seq,bolt_seq)
 	local t = os.date('*t') --	st_res.time
 
 	json_lua_output.get_by_names_array(tool, t, st_res, part_res,bolt_res)
+	json_lua_output.fill_tag_table(get_tags(tool))
 
 	local file = process_param_list(t, json_lua_output.result)
 
@@ -222,4 +231,90 @@ function LUA_GetJSON(tool, station, part_seq,bolt_seq)
 return json , file
 
 end
+
+------------------------------------------------------------------------------------------
+function json_lua_output.fill_tag_table(system_type, tags)
+
+	json_lua_output.result.system_type = system_type
+	for i = 1,6,1 do
+		if valid_str(tags[i]) then
+			json_lua_output.result['tag'..i] = param_as_str(tags[i])
+		else
+			json_lua_output.result['tag'..i] = 'Tag '..i
+		end
+	end
+
+end
+
+-----------------------------------------------------------------------------------------
+-- return system_type and an array[6] of tag names
+function json_lua_output.default_get_tags(tool)
+
+	return 0 , {  'Tag 1', 'Tag 2', 'Tag 3', 'Tag 4', 'Tag 5', 'Tag 6' }
+
+end
+
+------------------------------------------------------------------------------------------
+json_lua_output.default_JsonFmt = "{"
+			-- header
+		..'	"format":	"channel",\n'
+		..'	"ip0":	"$!ip!$",\n'        -- IP address
+		..'	"node id":	"$!rack!$.$!slot!$",\n'   --  Rack/Slot
+		..'	"result":	"$!status!$",\n'        	-- OK/NOK
+		..'	"location name":	["$!system_type!$", "Line 1", "$!station_name!$", "default", "", "", ""],\n'
+		..'	"channel":	"$!tool_name!$",\n'      -- channnel name
+		..'	"prg nr":	$!prg!$,\n'              -- program number
+		..'	"prg name":	"$!operation!$",\n'      -- program name
+		..'	"SST":	"$!bolt_name!$",\n'      	-- bolt name
+		..'	"cycle":	$!seq!$,\n'              --
+		..'	"date":	"$!time!$",\n'  		-- 2017-01-11 10:59:19
+		..'	"id code":	"$!id!$",\n'      -- ID code
+		..'	"tool serial":	$!tool_sn!$,\n'     	-- tool serial number   (interger)
+			-- steps
+		..'	"tightening steps":	[{\n'
+		..'			"row":	"2",\n'            		-- row integer
+		..'			"column":	"A",\n'        		-- column
+		..'			"name":	"step",\n'        		-- step name
+		..'			"quality code":	"$!qc!$",\n'
+		..'			"category":	0,\n'
+		..'			"docu buffer":	1,\n'
+		..'			"result":	"$!status!$",\n'        -- OK/NOK
+				-- functions
+		..'			"tightening functions":	[\n'
+					-- function 1
+		..'				{\n'
+		..'					"name":	"$!tag1!$",\n' 	-- function name
+		..'					"act":	$!value1!$\n'   	-- actual value
+		..'				},\n'
+					-- function 2
+		..'				{\n'
+		..'					"name":	"$!tag2!$",\n' 	-- function name
+		..'					"act":	$!value2!$\n'   	-- actual value
+		..'				},\n'
+					-- function 3
+		..'				{\n'
+		..'					"name":	"$!tag3!$",\n' 	-- function name
+		..'					"act":	$!value3!$\n'   	-- actual value
+		..'				},\n'
+					-- function 4
+		..'				{\n'
+		..'					"name":	"$!tag4!$",\n'	-- function name
+		..'					"act":	$!value4!$\n'   	-- actual value
+		..'				},\n'
+					-- function 5
+		..'				{\n'
+		..'					"name":	"$!tag5!$",\n'	-- function name
+		..'					"act":	$!value5!$\n'   	-- actual value
+		..'				},\n'
+					-- function 6
+		..'				{\n'
+		..'					"name":	"$!tag6!$",\n' 	-- function name
+		..'					"act":	$!value6!$\n'   	-- actual value
+		..'				}\n'
+
+		..'			]\n'-- end of functions
+		..'		}\n'-- end of tightening step 2A
+		..'	]\n'	-- end of tightening steps
+		..'}'		-- end of text
+----------------------------------------------------------------------------------------------------
 

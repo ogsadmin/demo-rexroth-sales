@@ -1,5 +1,11 @@
 ------------------------------------------------------------------------------------------
 -- Barcode handling
+--
+-- Notes:
+--  - barcodes now basically allow .len as table, e.g. .len={4,6}.
+--    WARNING: this is only partially working at the moment, not all functions 
+--             and the OGS backend correctly work yet.
+--  - 
 
 barcodes = {}
 active_barcodes = {}
@@ -11,14 +17,29 @@ function sanitize(val)
 	if val ~= nil then return tostring(val) end
 	return ''
 end
---[[ must be implemented in customer barcode.lua
+--[[ must be implemented in customer barcode.lua (except Barcode_Init is implemented, see below)
+function Barcode_InitTable()
+	-- Fields to set for barcodes:
+    --   .name      Name as shown in the OGS GUI
+    --   .len       Max. length of field (might (later) be a table). Note that this should
+    --              be set to the maximum with of the ID if used for variable field lengths
+    --   .required  Set to 1 if this is a required field
+    --   .desc      Descriptive text, unused so far
+    --   .row       Display layout in OGS GUI, set row
+    --   .with      Display layout in OGS GUI, set relative with (of all fields in the same row)
+	-- 
+	barcodes[1] = { name="Materialnummer", len=10, required=1, desc="MNR", row=1, width=10 }
+	barcodes[2] = { name="Seriennummer",   len=8,  required=1, desc="SNR", row=1, width=8  }
+end
+]]--
+--[[ might be implemented in customer barcode.lua
 function BarCode_Init()
 	-- might call back into some configuration to get barocde settings
 	-- or simply define what is needed here.
 	-- .raw is the actual barcode received from the scanner source
 	-- .val is the processed value, i.e. the display value
 	-- .width is a relative value to calculate a real width of the field to display:  real_width[i] = real_common_width * ( width[i]) / SUM(width[1...n] )
-	barcodes[1] = { tag=1, name="Part ID", raw="", val="", source="", len=7, required=1, desc="Part ID",	row=1, width=7 }
+	barcodes[1] = { name="Part ID", len=7, required=1, desc="Part ID",	row=1, width=7 }
 
 	barcode_changed      = 0
 	barcode_first_change = 0
@@ -27,6 +48,42 @@ function BarCode_Init()
 	return barcodes
 end
 ]]
+-- New: instead of BarcodeInit, customer should implement Barcode_InitTable in barcode.lua.
+-- As a fallback (for backwards compatibility) Barcode_Init() may still be overridden in 
+-- barcode.lua (as this is loaded after this file) - but is not recommended.
+function BarCode_Init()
+
+	-- let customer fill the table
+	Barcode_InitTable()
+	-- fill in the redundant data
+	for k, v in pairs(barcodes) do
+		if v.tag == nil then
+            v.tag = k			-- by default v.tag = array index (key)
+        end
+		if v.raw ~= "" then		-- if raw does not exist or is non-empty, then reset it
+            v.raw = ""			
+        end
+		if v.val ~= "" then		-- if val does not exist or is non-empty, then reset it
+            v.val = ""			
+        end
+		if v.source ~= "" then	-- if source does not exist or is non-empty, then reset it
+            v.source = ""			
+        end
+		-- create the reverse lookup for length
+		v.len_set = {}
+		if type(v.len) == "table" then
+			for _,l in pairs(v.len) do v.len_set[l] = true end
+		else
+			v.len_set[v.len] = true
+		end
+	end
+	
+	barcode_changed      = 0
+	barcode_first_change = 0
+	assembly_in_process  = 0
+	return barcodes
+end
+
 
 function Barcode_SetFirstIfTblEmpty()
 
@@ -41,13 +98,24 @@ function Barcode_SetFirstIfTblEmpty()
 	barcode_first_change = 1
 	barcode_changed = 1
 
-
 end
 ----------------------------------------------------------
 function BarCode_CheckTag(tag, value)
 	local val = sanitize(value)
-	if #val == barcodes[tag].len then
-		return 1
+	if barcodes[tag].len_set ~= nil then
+		if barcodes[tag].len_set[#val] ~= nil then
+			return 1	-- the length is in the set
+		end
+	elseif type(barcodes[tag].len) == "table" then
+		for k,v in pairs(barcodes[tag].len) do 
+			if #val == v then
+				return 1	-- found length  in the array
+			end
+		end
+	else
+		if #val == barcodes[tag].len then
+			return 1
+		end
 	end
 	return nil
 end
@@ -60,13 +128,17 @@ function BarCode_AddNew(source, name, rawCode)
 	--       AddNew command , e.g. "SignalR", "Scanner", "Keyboard"
 	rawCode = sanitize(rawCode)
 	if source == 'Scanner' then
-		if  #rawCode == barcodes[1].len then
-			Barcode_SetFirstIfTblEmpty()
-			barcodes[1].raw = rawCode
-			barcodes[1].val = rawCode
-			barcodes[1].source = source
-			return 1
+		-- by default map scanned barcodes by length of the configured fields
+		for k, v in pairs(barcodes) do
+			if BarCode_CheckTag(v.tag, rawCode) ~= nil then
+				Barcode_SetFirstIfTblEmpty()
+				v.raw = rawCode
+				v.val = rawCode
+				v.source = source
+				return v.tag
+			end
 		end
+		-- not found:
 		return 0
 	elseif source == 'SignalR' then
 		-- SignalR
@@ -95,13 +167,11 @@ end
 function BarCode_InsertByName(source, name, rawCode)
 	rawCode = sanitize(rawCode)
 
-	--if name == 'part_barcode' then
-		-- workflow driven by part barcode
-	--end
-
 	if name == 'action_barcode' then
 		-- Tool of type BARCODE_READER
-		action_barcode = param_as_str(rawCode)
+		local s = param_as_str(rawCode)
+		action_barcode = s
+		Barcode_LastCode = s
 		return 1
 	end
 
@@ -135,6 +205,11 @@ function match_mask(mask,str)
 		return false end
 	end
 	return true
+end
+
+local lastMask = ""
+function BarCode_GetLastMask()
+	return lastMask
 end
 
 function BarCode_GetActionBarcode(mask)
@@ -253,14 +328,14 @@ function BarCode_CheckPartID(barcode_tbl)
 
 		if v.required == 0  then
 			number_of_not_required = number_of_not_required + 1
-			if  #val == v.len then
+			if  BarCode_CheckTag(v.tag, val) ~= nil then
 				some_of_not_required_exists = 1
 			end
 		end
 
-		if #val == v.len then
+		if BarCode_CheckTag(v.tag, val) ~= nil then
 			str = str .. v.val
-		elseif  v.required == 1 then
+		elseif v.required == 1 then
 			return ''  -- error
 		else
 			str = str .. TrimOrFill(val, v.len, '_')
@@ -270,7 +345,7 @@ function BarCode_CheckPartID(barcode_tbl)
 	if (number_of_not_required == 0) or (some_of_not_required_exists == 1) then
 		return str
 	else
-		return ''  -- errror
+		return ''  -- error
 	end
 
 end

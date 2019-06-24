@@ -77,8 +77,21 @@ function json.encode (v)
   end
   
   -- Handle booleans
-  if vtype=='number' or vtype=='boolean' then
+  if vtype=='boolean' then
     return tostring(v)
+  end
+  
+  -- Handle numbers
+  if vtype=='number' then
+    if v ~= v then
+        return '"NaN"'
+    elseif v == math.huge then
+        return '"+INF"'
+	elseif v == -math.huge then
+        return '"-INF"'
+    else
+		return tostring(v)
+	end
   end
   
   -- Handle tables

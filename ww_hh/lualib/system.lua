@@ -126,7 +126,7 @@ end
 ----------------------------------------------------------------------
 function create_bolt_result(station, part_seq, bolt_seq, name, tool, prg,
 							 torque, torque_min, torque_max, angle, angle_min, angle_max, result,
-							 qc, seq, tool_sn , operation)
+							 qc, seq, tool_sn , operation, barcode)
 
 	if station_results[station] ~= nil then
 
@@ -151,6 +151,7 @@ function create_bolt_result(station, part_seq, bolt_seq, name, tool, prg,
 			bolt_res.seq        = seq
 			bolt_res.tool_sn 	= tool_sn
 			bolt_res.operation  = operation
+			bolt_res.barcode    = barcode
 		end
 	end
 end
